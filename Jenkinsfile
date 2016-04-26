@@ -1,6 +1,6 @@
 node {
     // Mark the code checkout 'stage'....
-    stage 'Get Code'
+    stage 'Checkout'
 
     // Get some code from a GitHub repository
     git url: 'https://github.com/ovelindstrom/simple-maven-project-with-tests.git'
@@ -22,7 +22,6 @@ node {
 
     // Mark the code report stage
     stage 'Deploy'
-    input id: 'ReadyToDeploy', message: 'Are you ready to deploy?', ok: 'Hell Ya!', parameters: [[$class: 'ChoiceParameterDefinition', choices: ['test_1', 'test_2', 'qa', 'pre_prod', 'prod'], description: 'What environment do you want to mess up today?', name: 'Mess up Environment']]
-
+    input id: 'DeployIt', message: 'Deploy it', ok: 'Hell Yah!'
 
 }
