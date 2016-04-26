@@ -22,7 +22,7 @@ node {
 
     // Mark the code report stage
     stage 'Deploy'
-    input(message:'Are you ready to deploy',id:'DeployTo')
+    input id: 'ReadyToDeploy', message: 'Are you ready to deploy?', ok: 'Hell Ya!', parameters: [[$class: 'ChoiceParameterDefinition', choices: ['test_1', 'test_2', 'qa', 'pre_prod', 'prod'], description: 'What environment do you want to mess up today?', name: 'Mess up Environment']]
 
 
 }
