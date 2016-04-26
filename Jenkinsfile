@@ -20,4 +20,9 @@ node {
     stage 'Test'
     sh 'mvn -B verify'
 
+    // Mark the code report stage
+    stage 'Deploy'
+    input(message:'Are you ready to deploy',id:'DeployTo')
+
+
 }
