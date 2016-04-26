@@ -21,7 +21,7 @@ node {
     sh 'mvn -B verify'
 
     // Mark the code report stage
-    stage 'Deploy'
+    stage 'Fuck it up'
     input id: 'DeployIt', message: 'Deploy it', ok: 'Hell Yah!'
 
 }
