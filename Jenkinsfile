@@ -19,4 +19,5 @@ node {
     // Mark the code verify 'stage'....
     stage 'Verify'
     sh 'mvn -B verify'
+
 }
