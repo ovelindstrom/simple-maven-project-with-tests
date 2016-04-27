@@ -1,6 +1,9 @@
+
+
+
 node {
     // Mark the code checkout 'stage'....
-    stage 'Checkout'
+    stage 'Fetch'
 
     // Get some code from a GitHub repository
     git url: 'https://github.com/ovelindstrom/simple-maven-project-with-tests.git'
@@ -12,12 +15,12 @@ node {
     env.PATH = "${mvnHome}/bin:${env.PATH}"
 
     // Mark the code build 'stage'....
-    stage 'Assemble'
+    stage 'Build'
     // Run the maven build
     sh 'mvn clean install'
 
     // Mark the code verify 'stage'....
-    stage 'Test'
+    stage 'Verify'
     sh 'mvn -B verify'
 
     // Mark the code report stage
