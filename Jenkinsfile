@@ -1,7 +1,7 @@
 
 
 
-node(linux) {
+node('linux') {
     // Mark the code checkout 'stage'....
     stage 'Fetch'
 
