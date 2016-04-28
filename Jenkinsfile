@@ -11,7 +11,7 @@ node {
     // Get the maven tool.
     // ** NOTE: This 'M3' maven tool must be configured
     // **       in the global configuration.
-    def mvnHome = tool 'M3_99'
+    def mvnHome = tool 'M339'
     env.PATH = "${mvnHome}/bin:${env.PATH}"
 
     // Mark the code build 'stage'....
