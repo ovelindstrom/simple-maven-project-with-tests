@@ -2,6 +2,11 @@
 
 
 node('linux') {
+    // The Fetch Stage
+	stage 'Fetch'
+
+	// Get the code from my GitHub repository
+	git url: 'https://github.com/ovelindstrom/simple-maven-project-with-tests.git'
     // Get the maven tool.
     // ** NOTE: This 'M3' maven tool must be configured
     // **       in the global configuration.
