@@ -1,7 +1,7 @@
 
 
 
-node {
+node('linux') {
     // Get the maven tool.
     // ** NOTE: This 'M3' maven tool must be configured
     // **       in the global configuration.
@@ -18,7 +18,7 @@ node {
     sh 'mvn -B verify'
 
     // Mark the code report stage
-    stage 'Fuck it up'
+    stage 'Mess it up'
     input id: 'DeployIt', message: 'Deploy it', ok: 'Hell Yah!'
 
 }
