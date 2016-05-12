@@ -1,7 +1,7 @@
 
 
 
-node {
+node('linux') {
     // The Fetch Stage
     stage 'Fetch'
 
